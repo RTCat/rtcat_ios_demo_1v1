@@ -58,13 +58,13 @@
     
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 
-    [request addValue:@"316c46d2-2db6-4a37-b86f-5268ba7aa747" forHTTPHeaderField:@"X-RTCAT-APIKEY"];
-    [request addValue:@"614cc653-82aa-40f5-8a93-f11802ffd26c" forHTTPHeaderField:@"X-RTCAT-SECRET"];
+    [request addValue:@"apikey" forHTTPHeaderField:@"X-RTCAT-APIKEY"];
+    [request addValue:@"secret" forHTTPHeaderField:@"X-RTCAT-SECRET"];
     
     // JSON Body
     NSDictionary* bodyObject = @{
                                  @"type": @"pub",
-                                 @"session_id": @"4775a191-d3f7-430a-a162-9a50ab6d4a70"
+                                 @"session_id": @"session_id"
                                  };
     request.HTTPBody = [NSJSONSerialization dataWithJSONObject:bodyObject options:kNilOptions error:NULL];
     
